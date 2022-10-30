@@ -1,8 +1,3 @@
-/*
-Problemy:
-Checkbox nie jest idealnie do lewej
-*/
-
 * {
     margin: 0 auto;
     padding: 0;
@@ -10,8 +5,8 @@ Checkbox nie jest idealnie do lewej
 }
 
 :root {
-    --base-color: #fff;
-    --primary-color: #FF0000;
+    --main-color: #FF0000;
+    --color-white: #fff;
     --blog-text-color: #6A6A6A;
     --service-text-color: #B2B2B2;
     --background-color: #28272C;
@@ -28,9 +23,9 @@ Checkbox nie jest idealnie do lewej
 }
 
 .btn {
-    background-color: var(--primary-color);
+    background-color: var(--main-color);
     padding: 20px 40px;
-    color: var(--base-color);
+    color: var(--color-white);
     border-radius: 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -38,8 +33,8 @@ Checkbox nie jest idealnie do lewej
 }
 
 .btn:hover {
-    background-color: var(--base-color);
-    color: var(--primary-color);
+    background-color: var(--color-white);
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -57,12 +52,12 @@ h3::before {
     display: inline-block;
     width: 80px;
     height: 4px;
-    background: var(--primary-color);
+    background: var(--main-color);
     right: 120%;
     top: 30%;
     position: absolute;
     border-radius: 8px;
-    box-shadow: 0px 1px 6px var(--primary-color)4D;
+    box-shadow: 0px 1px 6px var(--main-color)4D;
 }
 
 h3::after {
@@ -70,12 +65,12 @@ h3::after {
     display: inline-block;
     width: 80px;
     height: 4px;
-    background: var(--primary-color);
+    background: var(--main-color);
     left: 120%;
     top: 30%;
     position: absolute;
     border-radius: 10px;
-    box-shadow: 0px 1px 6px var(--primary-color)4D;
+    box-shadow: 0px 1px 6px var(--main-color)4D;
 }
 
 h4 {
@@ -91,7 +86,7 @@ nav {
     border-bottom: 2px solid #FFFFFF33;
     width: 100%;
     display: flex;
-    color: var(--base-color);
+    color: var(--color-white);
     z-index: 1;
 }
 
@@ -107,7 +102,7 @@ nav {
 }
 
 .logo span {
-    color: var(--primary-color);
+    color: var(--main-color);
     font-weight: 800;
 }
 
@@ -126,7 +121,7 @@ nav {
 
 .menu li:hover {
     background-color: #FFFFFF33;
-    color: var(--base-color);
+    color: var(--color-white);
 }
 
 .hero {
@@ -145,7 +140,7 @@ nav {
 
 .hero__container {
     z-index: 1;
-    color: white;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,13 +173,13 @@ nav {
 }
 
 .btn--second {
-    background-color: var(--base-color);
-    color: var(--primary-color);
+    background-color: var(--color-white);
+    color: var(--main-color);
 }
 
 .btn--second:hover {
-    background-color: var(--primary-color);
-    color: var(--base-color);
+    background-color: var(--main-color);
+    color: var(--color-white);
 }
 
 .button--down {
@@ -192,7 +187,7 @@ nav {
 }
 
 .down {
-    background-color: var(--primary-color);
+    background-color: var(--main-color);
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -254,7 +249,7 @@ nav {
 
 .blog .btn--small {
     margin-left: 0;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--main-color);
 }
 
 /*SECTION SERVICE*/
@@ -270,11 +265,11 @@ nav {
 }
 
 .service h3 {
-    color: var(--base-color);
+    color: var(--color-white);
 }
 
 .service h4 {
-    color: var(--base-color);
+    color: var(--color-white);
     font-weight: 400;
 }
 
@@ -343,27 +338,27 @@ nav {
 }
 
 .input:focus {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--main-color);
 }
 
 .btn--send {
-    background-color: var(--base-color);
-    color: var(--primary-color);
+    background-color: var(--color-white);
+    color: var(--main-color);
     box-shadow: 0px 3px 6px #FF00004D;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--main-color);
     padding: 15px 50px;
 }
 
 .btn--send:hover {
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--base-color);
+    background-color: var(--main-color);
+    color: var(--color-white);
 }
 
 .btn:active {
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--base-color);
+    background-color: var(--main-color);
+    color: var(--color-white);
     box-shadow: 1px 1px 10px inset;
 }
 
@@ -376,25 +371,23 @@ nav {
 
 .consent__label {
     display: flex;
-    gap: 10px;
-}
-
-.consent--checkbox {
-    display: flex;
-    gap: 10px;
+    cursor: pointer;
 }
 
 #consent + span {
     border: 1px solid #B2B2B2;
     align-self: start;
     border-radius: 8px;
-    background-color: var(--base-color);
+    background-color: var(--color-white);
     padding: 2px;
+    margin-right: 15px;
+    display: flex;
 }
 
 .consent img {
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
+    padding: 3px;
     opacity: 0;
 }
 
@@ -403,6 +396,8 @@ nav {
 }
 
 .consent input {
+    width: 0;
+    height: 0;
     opacity: 0;
 }
 
@@ -424,7 +419,7 @@ footer .container {
 }
 
 footer .logo {
-    color: var(--base-color);
+    color: var(--color-white);
     font-size: 25px;
     padding: 0;
 }
@@ -447,7 +442,7 @@ footer .logo {
 
 .lists {
     display: flex;
-    color: var(--base-color);
+    color: var(--color-white);
     text-transform: uppercase;
     align-items: stretch;
     gap: 50px;
@@ -462,7 +457,7 @@ footer .logo {
 }
 
 li:hover {
-    color: var(--primary-color);
+    color: var(--main-color;
     cursor: pointer;
 }
 
